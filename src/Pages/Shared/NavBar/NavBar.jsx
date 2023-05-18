@@ -17,8 +17,23 @@ const NavBar = () => {
     }
 
     const navItems = <>
-        <li><Link to="/">Home</Link> </li>
-        <li> <Link>All Toys</Link> </li>
+        <li
+        ><Link to="/">Home</Link> </li>
+        <li><Link>All Toy</Link> </li>
+
+        <li>
+        <div className="dropdown dropdown-hover">
+       <label tabIndex={0} className="btn m-1">All Category</label>
+       <ul tabIndex={0} className="dropdown-content  p-4 mt-96   bg-base-100 rounded-box w-48">
+        <li><Link>sports car</Link></li>
+        <li><Link>Teddy bear</Link></li>
+        <li><Link to="/animaltoys">Animal toys</Link></li>
+        <li><Link>Sports toys</Link></li>
+        <li><Link>Disney dolls</Link></li>
+        <li><Link>Toy robots</Link></li>
+      </ul>
+      </div>
+      </li>
       
         <li>
             {user && 
@@ -32,18 +47,19 @@ const NavBar = () => {
         }
         </li>  
 
-        <li> <Link>Blogs</Link> </li>
+        <li> <Link to="/qustion">Blogs</Link> </li>
         <li>
-             {user && (
-                <img className="person" src={user?.photoURL} alt="" />
-              )}
-
-        {user ? (
+            
+         {user ? (
             <button type="submit"  onClick={handleLogOut} className="btn">LogOut</button>
               ) : (
                 <Link to="/login">
                     <button type="submit" className="btn">Login</button>
                 </Link>
+              )}
+
+               {user && (
+                <img className="person" src={user?.photoURL} alt="" />
               )}
         </li>
       

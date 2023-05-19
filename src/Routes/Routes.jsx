@@ -7,6 +7,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 import AnimalToys from "../Pages/Category/AnimalToys";
 import Qustion from "../Pages/Qustion/Qustion";
 import BookService from "../Pages/BookService/BookService";
+import ToyBookings from "../Pages/BookingsToy/ToyBookings";
 
 const router = createBrowserRouter([
     {
@@ -37,7 +38,13 @@ const router = createBrowserRouter([
         {
           path:'book/:id',
           element:<BookService></BookService>,
-          loader: ({params}) => fetch(`http://localhost:5000/toyService/${params.id}`)
+          loader: ({params}) => fetch(`http://localhost:5000/carhouse/${params.id}`)
+        },
+        {
+          path:'mytoys',
+          element:<ToyBookings></ToyBookings>,
+          // loader: ({params}) => fetch(`http://localhost:5000/carhouse/${params.id}`)
+
         }
         
       ]

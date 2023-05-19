@@ -29,18 +29,17 @@ const NavBar = () => {
        <label tabIndex={0} className="btn m-1">All Category</label>
        <ul tabIndex={0} className="dropdown-content  p-4 mt-96   bg-base-100 rounded-box w-48">
         <li><Link>sports car</Link></li>
-        <li><Link>Teddy bear</Link></li>
+        <li><Link>Regular car</Link></li>
         <li><Link to="/animaltoys">Animal toys</Link></li>
-        <li><Link>Sports toys</Link></li>
-        <li><Link>Disney dolls</Link></li>
-        <li><Link>Toy robots</Link></li>
+        <li><Link>Mini fire truck</Link></li>
+        <li><Link>Mini police car</Link></li>
       </ul>
       </div>
       </li>
       
         <li>
             {user && 
-            <Link>My Toys</Link>
+            <Link to='mytoys'>My Toys</Link>
             }
         </li>
         

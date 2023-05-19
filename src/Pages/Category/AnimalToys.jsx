@@ -1,12 +1,13 @@
 // import React from 'react';
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const AnimalToys = () => {
 
     const [categoryes, setCategoryes] = useState([]);
 
     useEffect(() => {
-      fetch("http://localhost:5000/toyService")
+      fetch("http://localhost:5000/carhouse")
         .then((res) => res.json())
         .then((data) => setCategoryes(data))
         .catch((error) => console.log(error));
@@ -21,13 +22,17 @@ const AnimalToys = () => {
         <div key={category._id}>
           <div className="card w-52 bg-base-100 shadow-md">
             <figure>
-              <img src={category.img} alt="Category" />
+              <img className="w-52 h-52" src={category.img} alt="Category" />
             </figure>
             <div className="card-body">
               <h2 className="card-title">{category.category_title}</h2>
+              <p>Rating: {category.ratings}</p>
               <p>$ {category.price}</p>
+              {/* <p>{category.description}</p> */}
               <div className="card-actions justify-center ">
-                <button className="btn btn-primary">View Details</button>
+              <Link to={`/book/${category._id}`}>
+           <button className="btn btn-primary">View Details</button>
+           </Link>
               </div>
             </div>
           </div>

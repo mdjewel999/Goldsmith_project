@@ -7,7 +7,7 @@ const Services = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/toyService")
+    fetch("http://localhost:5000/carhouse")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);

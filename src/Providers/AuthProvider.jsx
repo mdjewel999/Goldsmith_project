@@ -62,7 +62,7 @@ const AuthProvider = ({ children }) => {
         const loggedUser = {
           email: currentUser.email
         }
-        fetch('', {
+        fetch('http://localhost:5000/toyBookings', {
           method: 'POST',
           headers:{
             'content-type': 'application/json'

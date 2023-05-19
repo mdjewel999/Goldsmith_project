@@ -6,6 +6,7 @@ import SignUp from "../Pages/SignUp/SignUp";
 // import Categoryes from "../Pages/Category/Categoryes";
 import AnimalToys from "../Pages/Category/AnimalToys";
 import Qustion from "../Pages/Qustion/Qustion";
+import BookService from "../Pages/BookService/BookService";
 
 const router = createBrowserRouter([
     {
@@ -24,24 +25,19 @@ const router = createBrowserRouter([
           path:'signup',
           element:<SignUp></SignUp>
         },
-        // {
-        //   path:'/',
-        //   element:<Categoryes></Categoryes>,
-        //   children:[
-        //     {
-        //       path:'/animaltoys',
-        //       element: <AnimalToys></AnimalToys>
-        //     }
-        //   ]
-        // },
-             {
-                path:'/animaltoys',
-                element: <AnimalToys></AnimalToys>
-              },
-              {
-                path:'/qustion',
-                element:<Qustion></Qustion>
-              }
+       {
+        path:'/animaltoys',
+        element: <AnimalToys></AnimalToys>,
+        },
+        {
+        path:'/qustion',
+        element:<Qustion></Qustion>
+        },
+        {
+          path:'book/:id',
+          element:<BookService></BookService>,
+          loader: ({params}) => fetch(`http://localhost:5000/toyService/${params.id}`)
+        }
         
       ]
     },

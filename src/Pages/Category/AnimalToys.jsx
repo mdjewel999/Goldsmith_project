@@ -6,7 +6,7 @@ const AnimalToys = () => {
     const [categoryes, setCategoryes] = useState([]);
 
     useEffect(() => {
-      fetch("categoryes.json")
+      fetch("http://localhost:5000/toyService")
         .then((res) => res.json())
         .then((data) => setCategoryes(data))
         .catch((error) => console.log(error));

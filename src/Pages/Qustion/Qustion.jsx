@@ -1,5 +1,5 @@
 // import React from 'react';
-
+import './Qustion.css'
 import { Link } from "react-router-dom";
 
 const Qustion = () => {

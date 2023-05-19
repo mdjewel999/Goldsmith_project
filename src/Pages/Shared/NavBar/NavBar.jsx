@@ -5,6 +5,8 @@ import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 
 const NavBar = () => {
+
+    
     const { user , logOut} = useContext(AuthContext);
     console.log(user);
     
@@ -16,10 +18,11 @@ const NavBar = () => {
         })
     }
 
-    const navItems = <>
+    const navItems = 
+    <>
         <li
         ><Link to="/">Home</Link> </li>
-        <li><Link>All Toy</Link> </li>
+        <li><Link to='/animaltoys'>All Toy</Link> </li>
 
         <li>
         <div className="dropdown dropdown-hover">
@@ -43,7 +46,7 @@ const NavBar = () => {
         
         <li>
         {user && 
-        <Link  to="book/:id"> Add A Toy</Link>
+        <Link> Add A Toy</Link>
         }
         </li>  
 

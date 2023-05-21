@@ -1,31 +1,31 @@
 import { useContext } from "react";
-import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 const BookService = () => {
-  const service = useLoaderData();
-  // console.log(service);
-  const { category_title, price, img, _id, ratings } = service;
   const { user } = useContext(AuthContext);
+  const navigate =useNavigate()
 
   const handleBookService = (event) => {
     event.preventDefault();
 
     const form = event.target;
-    const name = form.name.value;
-    const date = form.date.value;
+    const service = form.name.value;
+    const sellerName = form.seller_name.value;
+    const quantity = form.quantity.value;
     const rating =form.rating.value;
     const email = user?.email;
+    const price = form.price.value;
+    const img = form.photo.value;
+  
     const toyBooking = {
-      customerName: name,
+      customerName: sellerName,
       email,
       img,
-      date,
+      service,
+      quantity,
       rating,
-      service: category_title,
-      service_id: _id,
-      price: price,
-      Rating: ratings,
+      price,
     };
 
     console.log(toyBooking);
@@ -42,31 +42,43 @@ const BookService = () => {
         console.log(data);
         if(data.insertedId){
             alert('add booking successfully')
+
+            navigate(`/adtoy`)
         }
       });
   };
 
   return (
     <div>
-      <h2 className="text-center text-3xl">Add Toys: {category_title} </h2>
+      <h2 className="text-center text-3xl">Add Toys:  </h2>
       <form onSubmit={handleBookService}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Name</span>
+              <span className="label-text">Product Name</span>
             </label>
             <input
               type="text"
-              defaultValue={user?.displayName}
               name="name"
               className="input input-bordered"
             />
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Date</span>
+              <span className="label-text">seller name</span>
             </label>
-            <input type="date" name="date" className="input input-bordered" />
+            <input
+              type="text"
+              defaultValue={user?.displayName}
+              name="seller_name"
+              className="input input-bordered"
+            />
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Available quantity</span>
+            </label>
+            <input type="number" name="quantity" className="input input-bordered" />
           </div>
           <div className="form-control">
             <label className="label">
@@ -99,7 +111,6 @@ const BookService = () => {
               type="text"
               name="rating"
               placeholder="Rating"
-              defaultValue={user?.ratings}
               className="input input-bordered" 
             />
           </div>
@@ -109,7 +120,7 @@ const BookService = () => {
             </label>
             <input
               type="text"
-              defaultValue={"$" + price}
+              name="price"
               className="input input-bordered"
             />
           </div>
@@ -118,7 +129,7 @@ const BookService = () => {
           <input
             className="btn btn-primary btn-block"
             type="submit"
-            value="Order Confirm"
+            value="Add Toy"
           />
         </div>
       </form>

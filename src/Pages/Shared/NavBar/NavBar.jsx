@@ -47,7 +47,7 @@ const NavBar = () => {
         
         <li>
         {user && 
-        <Link to="/animaltoys"> Add A Toy</Link>
+        <Link to="/book"> Add A Toy</Link>
         }
         </li>  
 

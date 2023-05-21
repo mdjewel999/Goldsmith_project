@@ -100,7 +100,7 @@ const ToyBooking = () => {
               </th>
               <th>Image</th>
               <th>Toys Name</th>
-              <th>Email</th>
+              <th>Seller Name</th>
               <th>Rating</th>
               <th>Price</th>
               <th>

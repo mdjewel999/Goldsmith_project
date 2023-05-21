@@ -52,8 +52,8 @@ const AnimalToys = () => {
                 <p>$ {category.price}</p>
                 {/* <p>{category.description}</p> */}
                 <div className="card-actions justify-center ">
-                  <Link to={`/book/${category._id}`}>
-                    <button className="btn btn-primary">Add To Toy</button>
+                  <Link to={`/book`}>
+                    <button className="btn btn-primary">Add a Toy</button>
                   </Link>
                 </div>
               </div>

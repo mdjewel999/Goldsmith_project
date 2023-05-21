@@ -3,6 +3,9 @@ import { useState } from "react";
 const Categorys = () => {
   const [activeCard, setActiveCard] = useState(null);
 
+  const [modalOpen, setModalOpen] = useState(false);
+
+
   const handleMenuClick = (cardNumber) => {
     if (activeCard === cardNumber) {
       setActiveCard(null); 
@@ -11,6 +14,14 @@ const Categorys = () => {
     }
   };
 
+
+  const handleViewDetails = () => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
   
 
   return (
@@ -72,8 +83,11 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-                <button  className="btn btn-primary">
-                  View Details{" "}
+              <button
+                  onClick={handleViewDetails}
+                  className="btn btn-primary"
+                >
+                  View Details
                 </button>
               </div>
             </div>
@@ -99,7 +113,12 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">View Details </button>
+              <button
+                  onClick={handleViewDetails}
+                  className="btn btn-primary"
+                >
+                  View Details
+                </button>
               </div>
             </div>
           </div>
@@ -121,7 +140,12 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">View Details </button>
+              <button
+                  onClick={handleViewDetails}
+                  className="btn btn-primary"
+                >
+                  View Details
+                </button>
               </div>
             </div>
           </div>
@@ -143,7 +167,12 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">View Details </button>
+              <button
+                  onClick={handleViewDetails}
+                  className="btn btn-primary"
+                >
+                  View Details
+                </button>
               </div>
             </div>
           </div>
@@ -172,7 +201,12 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">View Details </button>
+              <button
+                  onClick={handleViewDetails}
+                  className="btn btn-primary"
+                >
+                  View Details
+                </button>
               </div>
             </div>
           </div>
@@ -194,7 +228,12 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">View Details </button>
+              <button
+                  onClick={handleViewDetails}
+                  className="btn btn-primary"
+                >
+                  View Details
+                </button>
               </div>
             </div>
           </div>
@@ -216,7 +255,12 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">View Details</button>
+              <button
+                  onClick={handleViewDetails}
+                  className="btn btn-primary"
+                >
+                  View Details
+                </button>
               </div>
             </div>
           </div>
@@ -238,7 +282,12 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">View Details</button>
+              <button
+                  onClick={handleViewDetails}
+                  className="btn btn-primary"
+                >
+                  View Details
+                </button>
               </div>
             </div>
           </div>
@@ -265,7 +314,12 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">View Details</button>
+              <button
+                  onClick={handleViewDetails}
+                  className="btn btn-primary"
+                >
+                  View Details
+                </button>
               </div>
             </div>
           </div>
@@ -287,7 +341,12 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">View Details</button>
+              <button
+                  onClick={handleViewDetails}
+                  className="btn btn-primary"
+                >
+                  View Details
+                </button>
               </div>
             </div>
           </div>
@@ -309,7 +368,12 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">View Details</button>
+              <button
+                  onClick={handleViewDetails}
+                  className="btn btn-primary"
+                >
+                  View Details
+                </button>
               </div>
             </div>
           </div>
@@ -331,12 +395,31 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-                <button className="btn btn-primary">View Details</button>
+                <button
+                  onClick={handleViewDetails}
+                  className="btn btn-primary"
+                >
+                  View Details
+                </button>
               </div>
             </div>
           </div>
         </div>
       )}
+
+        {modalOpen && (
+        <div className="modal">
+          <div className="modal-box">
+            <button className="modal-close" onClick={closeModal}>
+              X
+            </button>
+            <h2>Modal Title</h2>
+            <p>Modal Content</p>
+          </div>
+        </div>
+      )}
+
+
     </div>
   );
 };

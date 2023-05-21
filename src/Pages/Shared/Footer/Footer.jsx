@@ -12,7 +12,7 @@ const Footer = () => {
         <p className='text-white font-bold'>
           ACME Industries Ltd.
           <br />
-          Providing reliable tech since 1992
+          Providing reliable tech since 2023
         </p>
       </div>
       <div className='footer-text'>

@@ -1,12 +1,14 @@
 // import React from 'react';
 
 import { Link } from "react-router-dom";
-import img from "../../assets/images/login/login.svg";
+import img from "../../assets/images/login/login1.svg";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
   const { signIn, signInWithGoogle } = useContext(AuthContext);
+
+
   const [successMessage, setSuccessMessage] = useState("");
 
   const handleLogin = (event) => {
@@ -16,12 +18,16 @@ const Login = () => {
     const password = form.password.value;
     console.log(name, email, password);
 
+
+
+
     signIn(email, password)
       .then((result) => {
         const user = result.user;
         console.log(user);
         setSuccessMessage("Logged in successfully!");
         // navigate(from, { replace: true })
+        form.reset();
       })
       .catch((error) => console.log(error));
   };
@@ -40,7 +46,7 @@ const Login = () => {
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row">
-        <div className="w-1/2 mr-12">
+        <div className="w-1/3 mr-12">
           <img src={img} alt="" />
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
@@ -89,10 +95,11 @@ const Login = () => {
                 Sign Up
               </Link>{" "}
             </p>
+            <p>{successMessage}</p>
             <button onClick={handleSignInWithGoogle}>Google Sign-in</button>
+           
           </div>
         </div>
-        <div></div>
       </div>
     </div>
   );

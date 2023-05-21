@@ -4,7 +4,9 @@ import './NavBar.css'
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 
+
 const NavBar = () => {
+
 
     
     const { user , logOut} = useContext(AuthContext);
@@ -27,10 +29,10 @@ const NavBar = () => {
         <li>
         <div className="dropdown dropdown-hover">
        <label tabIndex={0} className="btn m-1">All Category</label>
-       <ul tabIndex={0} className="dropdown-content  p-4 mt-96   bg-base-100 rounded-box w-48">
+       <ul tabIndex={0} className="dropdown-content  p-4 mt-96 sm:mr-96  bg-base-100 rounded-box w-48">
         <li><Link>sports car</Link></li>
         <li><Link>Regular car</Link></li>
-        <li><Link to="/animaltoys">Animal toys</Link></li>
+        <li><Link to="/animaltoys">Cars Toys</Link></li>
         <li><Link>Mini fire truck</Link></li>
         <li><Link>Mini police car</Link></li>
       </ul>
@@ -39,18 +41,18 @@ const NavBar = () => {
       
         <li>
             {user && 
-            <Link to='mytoys'>My Toys</Link>
+            <Link  to="/adtoy">My Toys</Link>
             }
         </li>
         
         <li>
         {user && 
-        <Link> Add A Toy</Link>
+        <Link to="/animaltoys"> Add A Toy</Link>
         }
         </li>  
 
         <li> <Link to="/qustion">Blogs</Link> </li>
-        <li>
+        <li className="login_logout">
             
          {user ? (
             <button type="submit"  onClick={handleLogOut} className="btn">LogOut</button>
@@ -70,15 +72,19 @@ const NavBar = () => {
         <div className="navbar bg-base-100 h-28">
             <div className="navbar-start">
                 <div className="dropdown">
-                    <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         {navItems}
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost normal-case text-xl">
-                    <img className="logo_img" src={logo} alt="" />
+                <Link to="/" className="">
+                <div className="avatar">
+                   <div className="w-16 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                     <img src={logo} />
+                   </div>
+                 </div>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -87,7 +93,7 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-            <button className="btn btn-outline btn-primary text-white">HAPPY TOYS HOUSE</button>
+            <button className="btn  btn-primary text-white">HAPPY TOYS HOUSE</button>
             </div>
         </div>
     );

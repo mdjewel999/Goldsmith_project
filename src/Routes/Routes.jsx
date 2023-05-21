@@ -3,11 +3,12 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
-// import Categoryes from "../Pages/Category/Categoryes";
 import AnimalToys from "../Pages/Category/AnimalToys";
 import Qustion from "../Pages/Qustion/Qustion";
 import BookService from "../Pages/BookService/BookService";
-import ToyBookings from "../Pages/BookingsToy/ToyBookings";
+import ToyBooking from "../Pages/ToyBooking/ToyBooking";
+import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
@@ -36,15 +37,18 @@ const router = createBrowserRouter([
         },
         
         {
-          path:'book/:id',
+          path:'/book/:id',
           element:<BookService></BookService>,
           loader: ({params}) => fetch(`http://localhost:5000/carhouse/${params.id}`)
         },
         {
-          path:'mytoys',
-          element:<ToyBookings></ToyBookings>,
+          path:'/adtoy',
+          element:<PrivateRoute><ToyBooking></ToyBooking></PrivateRoute>,
           // loader: ({params}) => fetch(`http://localhost:5000/carhouse/${params.id}`)
-
+        },
+        {
+          path:'*',
+          element:<ErrorPage></ErrorPage>
         }
         
       ]

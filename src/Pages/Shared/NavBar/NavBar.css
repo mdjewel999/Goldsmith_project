@@ -15,3 +15,8 @@
     border-radius: 80%;
    
 }
+.login_logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

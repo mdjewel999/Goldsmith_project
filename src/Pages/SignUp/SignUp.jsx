@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import img from "../../assets/images/login/login.svg";
-import { useContext } from "react";
+import img from "../../assets/images/login/login2.svg";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const SignUp = () => {
   const { createUser } = useContext(AuthContext);
+  const [error, setError] = useState('')
 
   const handleSignUp = (event) => {
     event.preventDefault();
@@ -14,12 +15,25 @@ const SignUp = () => {
     const password = form.password.value;
     console.log(name, email, password);
 
+    
+ setError('');
+ if(password !== confirm){
+    setError('Your password did not match')
+    return;
+ }
+ else if (password.length < 6){
+    setError('password must be 6 characters or longer')
+    return;
+ }
+
     createUser(email, password)
       .then((result) => {
         const user = result.user;
         console.log("created user", user);
+        form.reset();
       })
       .catch((error) => console.log(error));
+      setError(error.message)
   };
 
   
@@ -27,12 +41,12 @@ const SignUp = () => {
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content flex-col lg:flex-row">
-        <div className="w-1/2 mr-12">
+        <div className="w-1/3 mr-12">
           <img src={img} alt="" />
         </div>
         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
           <div className="card-body">
-            <h1 className="text-3xl text-center font-bold">Sign Up</h1>
+            <h1 className="text-3xl text-center font-bold">Registration</h1>
             <form onSubmit={handleSignUp}>
               <div className="form-control">
                 <label className="label">
@@ -69,7 +83,7 @@ const SignUp = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Confirm Password</span>
+                  <span className="label-text">Password</span>
                 </label>
                 <input
                   type="password"
@@ -97,6 +111,7 @@ const SignUp = () => {
                 Login
               </Link>{" "}
             </p>
+            <p className='text-error'>{error}</p>
           </div>
         </div>
       </div>

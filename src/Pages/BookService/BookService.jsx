@@ -30,20 +30,20 @@ const BookService = () => {
 
     console.log(toyBooking);
 
-    // fetch("http://localhost:5000/toyBookings", {
-    //   method: "POST",
-    //   headers: {
-    //     "content-type": "application/json",
-    //   },
-    //   body: JSON.stringify(toyBooking),
-    // })
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     console.log(data);
-    //     // if(data.insertedId){
-    //     //     alert('service book successfully')
-    //     // }
-    //   });
+    fetch('http://localhost:5000/toybooking',{
+        method:'POST',
+        headers:{
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(toyBooking)
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if(data.insertedId){
+            alert('add booking successfully')
+        }
+      });
   };
 
   return (
@@ -100,12 +100,12 @@ const BookService = () => {
               name="rating"
               placeholder="Rating"
               defaultValue={user?.ratings}
-              className="input input-bordered"
+              className="input input-bordered" 
             />
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Amount</span>
+              <span className="label-text">Price</span>
             </label>
             <input
               type="text"

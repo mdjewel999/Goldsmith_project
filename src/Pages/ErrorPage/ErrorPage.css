@@ -1,0 +1,7 @@
+.go_to_home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}

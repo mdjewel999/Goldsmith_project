@@ -63,7 +63,7 @@ const ToyBooking = () => {
 
   const handleFilter = () => {
     if (filterName) {
-      const filtered = bookings.filter((booking) => booking.toysName === filterName);
+      const filtered = bookings.filter((booking) => booking.service === filterName);
       setFilteredBookings(filtered);
     } else {
       setFilteredBookings(bookings);
@@ -91,7 +91,6 @@ const ToyBooking = () => {
       </div>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
-          {/* head */}
           <thead>
             <tr>
               <th>

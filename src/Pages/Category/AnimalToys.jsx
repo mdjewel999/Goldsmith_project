@@ -12,12 +12,7 @@ const AnimalToys = () => {
   const [categoryes, setCategoryes] = useState([]);
   const [rating, setRating] = useState(0)
 
-  // useEffect(() => {
-  //   fetch("https://happy-toy-house-server-mdjewel999.vercel.app/carhouse")
-  //     .then((res) => res.json())
-  //     .then((data) => setCategoryes(data))
-  //     .catch((error) => console.log(error));
-  // }, []);
+  
 
 
   useEffect(() => {

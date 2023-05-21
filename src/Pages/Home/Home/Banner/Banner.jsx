@@ -22,9 +22,7 @@ const Banner = () => {
             </p>
             <div>
               <button className="btn btn-primary mr-5">Discover More</button>
-              <button className="btn btn-outline btn-secondary">
-                Latest Project
-              </button>
+             
             </div>
           </div>
         </div>
@@ -52,9 +50,7 @@ const Banner = () => {
             </p>
             <div>
               <button className="btn btn-primary mr-5">Discover More</button>
-              <button className="btn btn-outline btn-secondary">
-                Latest Project
-              </button>
+             
             </div>
           </div>
         </div>
@@ -82,9 +78,7 @@ const Banner = () => {
             </p>
             <div>
               <button className="btn btn-primary mr-5">Discover More</button>
-              <button className="btn btn-outline btn-secondary">
-                Latest Project
-              </button>
+              
             </div>
           </div>
         </div>
@@ -112,9 +106,7 @@ const Banner = () => {
             </p>
             <div>
               <button className="btn btn-primary mr-5">Discover More</button>
-              <button className="btn  btn-primary">
-                Latest Project
-              </button>
+             
             </div>
           </div>
         </div>

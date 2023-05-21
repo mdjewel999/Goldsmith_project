@@ -8,6 +8,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 const Login = () => {
   const { signIn, signInWithGoogle } = useContext(AuthContext);
 
+  
 
   const [successMessage, setSuccessMessage] = useState("");
 
@@ -95,7 +96,13 @@ const Login = () => {
                 Sign Up
               </Link>{" "}
             </p>
-            <p>{successMessage}</p>
+            <div className="toast  toast-center justify-center">
+              <div className="alert alert-success">
+                <div>
+                  <span>{successMessage}</span>
+                </div>
+              </div>
+            </div>
             <button onClick={handleSignInWithGoogle}>Google Sign-in</button>
            
           </div>

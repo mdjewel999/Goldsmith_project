@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import img from "../../assets/images/login/login2.svg";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import "./SignUp.css";
 
 const SignUp = () => {
   const { createUser } = useContext(AuthContext);
-  const [error, setError] = useState('')
+  const [error, setError] = useState("");
 
-  const handleSignUp = (event) => {
+  const handleSignUp = async (event) => {
     event.preventDefault();
     const form = event.target;
     const name = form.name.value;
@@ -15,28 +16,23 @@ const SignUp = () => {
     const password = form.password.value;
     console.log(name, email, password);
 
-    
- setError('');
- if(password !== confirm){
-    setError('Your password did not match')
-    return;
- }
- else if (password.length < 6){
-    setError('password must be 6 characters or longer')
-    return;
- }
+    setError("");
 
-    createUser(email, password)
-      .then((result) => {
-        const user = result.user;
-        console.log("created user", user);
-        form.reset();
-      })
-      .catch((error) => console.log(error));
-      setError(error.message)
+    if (password.length < 6) {
+      setError("Password must be 6 characters or longer");
+      return;
+    }
+
+    try {
+      const result = await createUser(email, password);
+      const user = result.user;
+      console.log("created user", user);
+      form.reset();
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    }
   };
-
-  
 
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -97,6 +93,7 @@ const SignUp = () => {
                   </a>
                 </label>
               </div>
+
               <div className="form-control mt-6">
                 <input
                   className="btn btn-primary"
@@ -111,7 +108,14 @@ const SignUp = () => {
                 Login
               </Link>{" "}
             </p>
-            <p className='text-error'>{error}</p>
+            <div className="toast  toast-center">
+              <div className="alert alert-success">
+                <div>
+                  <span>{error}</span>
+                </div>
+              </div>
+            </div>
+            {/* <p className='text-error'></p> */}
           </div>
         </div>
       </div>

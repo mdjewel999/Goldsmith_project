@@ -1,6 +1,8 @@
 // import React from 'react';
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 import AOS from "aos";
 import "aos/dist/aos.css"; 
 // ..
@@ -8,9 +10,10 @@ AOS.init();
 
 const AnimalToys = () => {
   const [categoryes, setCategoryes] = useState([]);
+  const [rating, setRating] = useState(0)
 
   useEffect(() => {
-    fetch("http://localhost:5000/carhouse")
+    fetch("https://happy-toy-house-server-mdjewel999.vercel.app/carhouse")
       .then((res) => res.json())
       .then((data) => setCategoryes(data))
       .catch((error) => console.log(error));
@@ -39,7 +42,10 @@ const AnimalToys = () => {
               </figure>
               <div className="card-body">
                 <h2 className="card-title">{category.category_title}</h2>
-                <p>Rating: {category.ratings} <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" /></p>
+                <div className="">
+                <span>Rating: {category.ratings} </span>
+               <Rating style={{ maxWidth: 250 }} value={rating} onChange={setRating} />
+                </div>
                 <p>$ {category.price}</p>
                 {/* <p>{category.description}</p> */}
                 <div className="card-actions justify-center ">

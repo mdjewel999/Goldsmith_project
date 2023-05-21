@@ -15,7 +15,7 @@ const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
 
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 //   const googleProvider = new GoogleAuthProvider();
 
@@ -62,7 +62,7 @@ const AuthProvider = ({ children }) => {
         const loggedUser = {
           email: currentUser.email
         }
-        fetch('http://localhost:5000/toyBookings', {
+        fetch('https://happy-toy-house-server-mdjewel999.vercel.app/toyBookings', {
           method: 'POST',
           headers:{
             'content-type': 'application/json'
@@ -73,11 +73,11 @@ const AuthProvider = ({ children }) => {
         .then(data =>{
           console.log('jwt response', data);
 
-          localStorage.setItem('car-access-token', data.token)
+          localStorage.setItem('toy-access-token', data.token)
         })
       }
       else{
-        localStorage.removeItem('car-access-token');
+        localStorage.removeItem('toy-access-token');
       }
     });
     return () => {

@@ -39,12 +39,11 @@ const router = createBrowserRouter([
         {
           path:'/book/:id',
           element:<BookService></BookService>,
-          loader: ({params}) => fetch(`http://localhost:5000/carhouse/${params.id}`)
+          loader: ({params}) => fetch(`https://happy-toy-house-server-mdjewel999.vercel.app/carhouse/${params.id}`)
         },
         {
           path:'/adtoy',
           element:<PrivateRoute><ToyBooking></ToyBooking></PrivateRoute>,
-          // loader: ({params}) => fetch(`http://localhost:5000/carhouse/${params.id}`)
         },
         {
           path:'*',

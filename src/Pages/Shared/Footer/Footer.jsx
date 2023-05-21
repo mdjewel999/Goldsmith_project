@@ -4,7 +4,8 @@ import './Footer.css'
 
 const Footer = () => {
   return (
-    <div className='footer'>
+    <div>
+      <div className='footer'>
         <footer className="footer p-10  text-base-content h-auto">
       <div>
        <img className='logo_img' src={logo} alt="" />
@@ -14,19 +15,19 @@ const Footer = () => {
           Providing reliable tech since 1992
         </p>
       </div>
-      <div>
+      <div className='footer-text'>
         <span className="footer-title text-white font-bold">Services</span>
-        <a className="link link-hover text-white font-bold">Branding</a>
-        <a className="link link-hover text-white font-bold">Design</a>
-        <a className="link link-hover text-white font-bold">Marketing</a>
-        <a className="link link-hover text-white font-bold">Advertisement</a>
+        <a className="link link-hover text-white font-bold">sports car</a>
+        <a className="link link-hover text-white font-bold">Truck</a>
+        <a className="link link-hover text-white font-bold"> Regular car</a>
+        <a className="link link-hover text-white font-bold">Mini fire truck</a>
       </div>
       <div>
         <span className="footer-title text-white font-bold">Company</span>
-        <a className="link link-hover text-white font-bold">About us</a>
-        <a className="link link-hover text-white font-bold">Contact</a>
-        <a className="link link-hover text-white font-bold">Jobs</a>
-        <a className="link link-hover text-white font-bold">Press kit</a>
+        <a className="link link-hover text-white font-bold">AToyota</a>
+        <a className="link link-hover text-white font-bold">Volkswagen</a>
+        <a className="link link-hover text-white font-bold">Honda</a>
+        <a className="link link-hover text-white font-bold">BMW</a>
       </div>
       <div>
         <span className="footer-title text-white font-bold">Legal</span>
@@ -35,7 +36,13 @@ const Footer = () => {
         <a className="link link-hover text-white font-bold">Cookie policy</a>
       </div>
     </footer>
+    
     </div>
+    <div className='footer_last'>
+      <p className='text-center text-2xl'>Things for Cuties © 2022 / 2023 - Template by ssievert</p>
+    </div>
+    </div>
+    
   );
 };
 

@@ -5,3 +5,7 @@
     text-align: center;
     margin-top: 20px;
 }
+.error_img{
+    border: 2px solid white;
+border-radius: 100%;
+}

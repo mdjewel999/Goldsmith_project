@@ -5,10 +5,10 @@
 
 
 
-** GitHub Client_site Link: https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-client-side-mdjewel999
+** GitHub Client_site Link: https://github.com/mdjewel999/happy-toy-house-client2
 
 
-** GitHub Server_site Link: https://github.com/programming-hero-web-course-4/b7a11-toy-marketplace-server-side-mdjewel999
+** GitHub Server_site Link: https://github.com/mdjewel999/happy-toy-house-server2
 
 
 *****Project Details:

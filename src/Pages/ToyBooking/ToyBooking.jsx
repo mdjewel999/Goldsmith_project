@@ -77,7 +77,7 @@ const ToyBooking = () => {
         <div>
           <input
             type="text"
-            placeholder="Enter Toy Name"
+            placeholder="Enter Jewelry Name"
             className="input input-bordered"
             value={filterName}
             onChange={(e) => setFilterName(e.target.value)}
@@ -99,7 +99,7 @@ const ToyBooking = () => {
                 </label>
               </th>
               <th>Image</th>
-              <th>Toys Name</th>
+              <th>Jewelry Name</th>
               <th>Seller Name</th>
               <th>Rating</th>
               <th>Price</th>

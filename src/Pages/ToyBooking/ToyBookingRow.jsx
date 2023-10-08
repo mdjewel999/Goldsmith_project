@@ -6,7 +6,9 @@ const ToyBookingRow = ({ booking, handleDelete, handleBookingConfirm }) => {
   return (
     <tr>
       <th>
-        <button onClick={() => handleDelete(_id)} className="btn btn-active">Delete</button>
+        <button onClick={() => handleDelete(_id)} className="btn btn-active">
+          Delete
+        </button>
       </th>
       <td>
         <div className="avatar">
@@ -18,14 +20,24 @@ const ToyBookingRow = ({ booking, handleDelete, handleBookingConfirm }) => {
       <td>{service}</td>
       <td>{customerName}</td>
       <td>
-        {rating}  <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+        {rating}{" "}
+        <input
+          type="radio"
+          name="rating-2"
+          className="mask mask-star-2 bg-orange-400"
+        />
       </td>
       <td>${price}</td>
       <th>
         {status === "confirm" ? (
           <span className="font-bold text-primary">Update</span>
         ) : (
-          <button onClick={() => handleBookingConfirm(_id)} className="btn btn-ghost btn-xs">Please Update</button>
+          <button
+            onClick={() => handleBookingConfirm(_id)}
+            className="btn btn-ghost btn-xs"
+          >
+            Please Update
+          </button>
         )}
       </th>
     </tr>

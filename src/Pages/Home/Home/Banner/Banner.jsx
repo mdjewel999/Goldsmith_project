@@ -12,10 +12,10 @@ const Banner = () => {
         <div className="absolute rounded-xl flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
           <div className="text-white space-y-7 pl-12 w-1/2">
             <h2 className="text-6xl font-bold">
-              Discover the Joyful Wonderland of Happy Toys House!
+              Discover the Joyful Wonderland of Goldsimth House!
             </h2>
             <p>
-              Welcome to Happy Toys House, where imagination comes to life and
+              Welcome to Happy Goldsimth House, where imagination comes to life and
               joy is found around every corner! Step into a world of endless fun
               and laughter, where colorful displays and enchanting playsets
               await children of all ages.
@@ -68,7 +68,7 @@ const Banner = () => {
         <div className="absolute rounded-xl flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
           <div className="text-white space-y-7 pl-12 w-1/2">
           <h2 className="text-6xl font-bold">
-              Discover the Joyful Wonderland of Happy Toys House!
+              Discover the Joyful Wonderland of Happy Goldsimth House!
             </h2>
             <p>
               Welcome to Happy Toys House, where imagination comes to life and
@@ -96,7 +96,7 @@ const Banner = () => {
         <div className="absolute rounded-xl flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
           <div className="text-white space-y-7 pl-12 w-1/2">
           <h2 className="text-6xl font-bold">
-              Discover the Joyful Wonderland of Happy Toys House!
+              Discover the Joyful Wonderland of Happy Goldsimth House!
             </h2>
             <p>
               Welcome to Happy Toys House, where imagination comes to life and

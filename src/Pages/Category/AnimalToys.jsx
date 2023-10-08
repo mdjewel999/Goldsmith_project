@@ -31,7 +31,7 @@ const AnimalToys = () => {
 
   return (
     <>
-      <h1 className="text-center mt-8 font-bold text-5xl">Cars Toys</h1>
+      <h1 className="text-center mt-8 font-bold text-5xl">Jewelry</h1>
       <div
         className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-1 mt-8 mb-8"
         data-aos="fade-up"
@@ -53,7 +53,7 @@ const AnimalToys = () => {
                 {/* <p>{category.description}</p> */}
                 <div className="card-actions justify-center ">
                   <Link to={`/book`}>
-                    <button className="btn btn-primary">Add a Toy</button>
+                    <button className="btn btn-primary">Add Jewelry</button>
                   </Link>
                 </div>
               </div>

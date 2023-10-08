@@ -50,7 +50,7 @@ const BookService = () => {
 
   return (
     <div>
-      <h2 className="text-center text-3xl">Add Toys:  </h2>
+      <h2 className="text-center text-3xl">Add Jewelry:  </h2>
       <form onSubmit={handleBookService}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="form-control">
@@ -129,7 +129,7 @@ const BookService = () => {
           <input
             className="btn btn-primary btn-block"
             type="submit"
-            value="Add Toy"
+            value="Add jewelry"
           />
         </div>
       </form>

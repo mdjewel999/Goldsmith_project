@@ -32,7 +32,7 @@ const NavBar = () => {
        <ul tabIndex={0} className="dropdown-content  p-4 mt-96 sm:mr-96  bg-base-100 rounded-box w-48">
         <li><Link>sports car</Link></li>
         <li><Link>Regular car</Link></li>
-        <li><Link to="/animaltoys">Cars Toys</Link></li>
+        <li><Link to="/animaltoys">Goldsimth</Link></li>
         <li><Link>Mini fire truck</Link></li>
         <li><Link>Mini police car</Link></li>
       </ul>
@@ -41,13 +41,13 @@ const NavBar = () => {
       
         <li>
             {user && 
-            <Link  to="/adtoy">My Toys</Link>
+            <Link  to="/adtoy">My Jewelry</Link>
             }
         </li>
         
         <li>
         {user && 
-        <Link to="/book"> Add A Toy</Link>
+        <Link to="/book"> Add jewelry</Link>
         }
         </li>  
 
@@ -93,7 +93,7 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-            <button className="btn  btn-primary text-white">HAPPY TOYS HOUSE</button>
+            <button className="btn  btn-primary text-white">Goldsmith</button>
             </div>
         </div>
     );

@@ -5,15 +5,13 @@ const Categorys = () => {
 
   const [modalOpen, setModalOpen] = useState(false);
 
-
   const handleMenuClick = (cardNumber) => {
     if (activeCard === cardNumber) {
-      setActiveCard(null); 
+      setActiveCard(null);
     } else {
-      setActiveCard(cardNumber); 
+      setActiveCard(cardNumber);
     }
   };
-
 
   const handleViewDetails = () => {
     setModalOpen(true);
@@ -22,14 +20,14 @@ const Categorys = () => {
   const closeModal = () => {
     setModalOpen(false);
   };
-  
 
   return (
     <div className="mb-14">
       <div>
         <h1 className="text-5xl text-center font-bold mt-14 mb-8">
-        <button className="btn btn-primary w-1/2 ">Shop by category and subcategory</button>
-          
+          <button className="btn btn-primary w-1/2 ">
+            Shop by category and subcategory
+          </button>
         </h1>
       </div>
       <div className="navbar flex justify-center mb-8">
@@ -40,7 +38,7 @@ const Categorys = () => {
                 onClick={() => handleMenuClick(1)}
                 className="btn btn-active rounded btn-primary font-bold text-1xl"
               >
-                sports car
+                Diamond 
               </button>
             </li>
             <li className="text-3xl font-semibold">
@@ -48,7 +46,7 @@ const Categorys = () => {
                 onClick={() => handleMenuClick(2)}
                 className="btn rounded btn-primary font-bold text-1xl"
               >
-                Mini police car
+                Platinum 
               </button>
             </li>
             <li className="text-3xl font-semibold">
@@ -56,7 +54,7 @@ const Categorys = () => {
                 onClick={() => handleMenuClick(3)}
                 className="btn rounded btn-primary font-bold text-1xl"
               >
-                Mini fire truck
+               Silver 
               </button>
             </li>
           </ul>
@@ -69,13 +67,13 @@ const Categorys = () => {
             <figure>
               <img
                 className="w-full h-72"
-                src="https://m.media-amazon.com/images/I/81LyKDlY07L._SL1500_.jpg"
+                src="https://i.ibb.co/7VXKGBz/1.jpg"
                 alt="Shoes"
               />
             </figure>
             <div className="card-body">
               <h2 className="card-title">Price: $ 550</h2>
-              <h3>Name: Dual Tone Sports Car for Kid</h3>
+              <h3>Name: Platinum and Diamond Tennis Bracelet</h3>
               <p>Rating: 4.5</p>
               <p>
                 Made of Fine Metal:- Metal Car The material used in this kids
@@ -83,29 +81,24 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-              <button
-                  onClick={handleViewDetails}
-                  className="btn btn-primary"
-                >
+                <button onClick={handleViewDetails} className="btn btn-primary">
                   View Details
                 </button>
               </div>
             </div>
           </div>
-
-        
 
           <div className="">
             <figure>
               <img
                 className="w-full h-72"
-                src="https://m.media-amazon.com/images/I/71hjjVXYWLL._AC_UL320_.jpg"
+                src="https://i.ibb.co/25Sf8NW/9.jpg"
                 alt="Shoes"
               />
             </figure>
             <div className="card-body">
               <h2 className="card-title">Price: $ 540</h2>
-              <h3>Name: Dual Tone Sports Car for Kid</h3>
+              <h3>Name: Platinum and Diamond Tennis Bracelet</h3>
               <p>Rating: 4.5</p>
               <p>
                 Made of Fine Metal:- Metal Car The material used in this kids
@@ -113,10 +106,7 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-              <button
-                  onClick={handleViewDetails}
-                  className="btn btn-primary"
-                >
+                <button onClick={handleViewDetails} className="btn btn-primary">
                   View Details
                 </button>
               </div>
@@ -126,13 +116,13 @@ const Categorys = () => {
             <figure>
               <img
                 className="w-full h-72"
-                src="https://m.media-amazon.com/images/I/51531iAlpnL._AC_UL320_.jpg"
+                src="https://i.ibb.co/tX98bns/12.jpg"
                 alt="Shoes"
               />
             </figure>
             <div className="card-body">
               <h2 className="card-title">Price: $ 2550</h2>
-              <h3>Name: Dual Tone Sports Car for Kid</h3>
+              <h3>Name: Platinum and Diamond Tennis Bracelet</h3>
               <p>Rating: 4.5</p>
               <p>
                 Made of Fine Metal:- Metal Car The material used in this kids
@@ -140,10 +130,7 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-              <button
-                  onClick={handleViewDetails}
-                  className="btn btn-primary"
-                >
+                <button onClick={handleViewDetails} className="btn btn-primary">
                   View Details
                 </button>
               </div>
@@ -153,13 +140,13 @@ const Categorys = () => {
             <figure>
               <img
                 className="w-full h-72"
-                src="https://m.media-amazon.com/images/I/61AD6VKjZDL._AC_UL320_.jpg"
+                src="https://i.ibb.co/NsGJrcf/6.jpg"
                 alt="Shoes"
               />
             </figure>
             <div className="card-body">
               <h2 className="card-title">Price: $ 25350</h2>
-              <h3>Name: Dual Tone Sports Car for Kid</h3>
+              <h3>Name: Platinum and Diamond Tennis Bracelet</h3>
               <p>Rating: 4.5</p>
               <p>
                 Made of Fine Metal:- Metal Car The material used in this kids
@@ -167,10 +154,7 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-              <button
-                  onClick={handleViewDetails}
-                  className="btn btn-primary"
-                >
+                <button onClick={handleViewDetails} className="btn btn-primary">
                   View Details
                 </button>
               </div>
@@ -179,21 +163,19 @@ const Categorys = () => {
         </div>
       )}
 
-       
-
       {activeCard === 2 && (
         <div className="card  bg-base-100 shadow-xl grid grid-cols-2 gap-4 ">
           <div>
             <figure>
               <img
                 className="w-full h-72"
-                src="https://m.media-amazon.com/images/I/71dxE3svIKL._AC_UL640_QL65_.jpg"
+                src="https://i.ibb.co/4gwtS7T/5.jpg"
                 alt="Shoes"
               />
             </figure>
             <div className="card-body">
               <h2 className="card-title">Price: $ 27850</h2>
-              <h3>Name: Dual Tone Sports Car for Kid</h3>
+              <h3>Name: Platinum and Diamond Tennis Bracelet</h3>
               <p>Rating: 4.5</p>
               <p>
                 Made of Fine Metal:- Metal Car The material used in this kids
@@ -201,10 +183,7 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-              <button
-                  onClick={handleViewDetails}
-                  className="btn btn-primary"
-                >
+                <button onClick={handleViewDetails} className="btn btn-primary">
                   View Details
                 </button>
               </div>
@@ -214,13 +193,13 @@ const Categorys = () => {
             <figure>
               <img
                 className="w-full h-72"
-                src="https://m.media-amazon.com/images/I/61wc-HihYIL._AC_UL320_.jpg"
+                src="https://i.ibb.co/pvFP7xJ/3.jpg"
                 alt="Shoes"
               />
             </figure>
             <div className="card-body">
               <h2 className="card-title">Price: $ 278650</h2>
-              <h3>Name: Dual Tone Sports Car for Kid</h3>
+              <h3>Name: Platinum and Diamond Tennis Bracelet</h3>
               <p>Rating: 4.5 </p>
               <p>
                 Made of Fine Metal:- Metal Car The material used in this kids
@@ -228,10 +207,7 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-              <button
-                  onClick={handleViewDetails}
-                  className="btn btn-primary"
-                >
+                <button onClick={handleViewDetails} className="btn btn-primary">
                   View Details
                 </button>
               </div>
@@ -241,13 +217,13 @@ const Categorys = () => {
             <figure>
               <img
                 className="w-full h-72"
-                src="https://m.media-amazon.com/images/I/61DwNHnnTgL._AC_UL320_.jpg"
+                src="https://i.ibb.co/5njmvfk/14.jpg"
                 alt="Shoes"
               />
             </figure>
             <div className="card-body">
               <h2 className="card-title">Price: $ 27850</h2>
-              <h3>Name: Dual Tone Sports Car for Kid</h3>
+              <h3>Name: Platinum and Diamond Tennis Bracelet</h3>
               <p>Rating: 4.5</p>
               <p>
                 Made of Fine Metal:- Metal Car The material used in this kids
@@ -255,10 +231,7 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-              <button
-                  onClick={handleViewDetails}
-                  className="btn btn-primary"
-                >
+                <button onClick={handleViewDetails} className="btn btn-primary">
                   View Details
                 </button>
               </div>
@@ -268,13 +241,13 @@ const Categorys = () => {
             <figure>
               <img
                 className="w-full h-72"
-                src="https://m.media-amazon.com/images/I/51HT36omtzL._AC_UL320_.jpg"
+                src="https://i.ibb.co/QKvSMLG/8.jpg"
                 alt="Shoes"
               />
             </figure>
             <div className="card-body">
               <h2 className="card-title">Price: $ 278650</h2>
-              <h3>Name: Dual Tone Sports Car for Kid</h3>
+              <h3>Name: Platinum and Diamond Tennis Bracelet</h3>
               <p>Rating: 4.5</p>
               <p>
                 Made of Fine Metal:- Metal Car The material used in this kids
@@ -282,10 +255,7 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-              <button
-                  onClick={handleViewDetails}
-                  className="btn btn-primary"
-                >
+                <button onClick={handleViewDetails} className="btn btn-primary">
                   View Details
                 </button>
               </div>
@@ -300,13 +270,13 @@ const Categorys = () => {
             <figure>
               <img
                 className="w-full h-72"
-                src="https://m.media-amazon.com/images/I/71T-yEaPC6L._AC_UL320_.jpg"
+                src="https://i.ibb.co/J2G3T3W/11.jpg"
                 alt="Shoes"
               />
             </figure>
             <div className="card-body">
               <h2 className="card-title">Price: $ 257860</h2>
-              <h3>Name: Dual Tone Sports Car for Kid</h3>
+              <h3>Name: Aquamarine Stud Earrings</h3>
               <p>Rating: 4.5</p>
               <p>
                 Made of Fine Metal:- Metal Car The material used in this kids
@@ -314,10 +284,7 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-              <button
-                  onClick={handleViewDetails}
-                  className="btn btn-primary"
-                >
+                <button onClick={handleViewDetails} className="btn btn-primary">
                   View Details
                 </button>
               </div>
@@ -327,13 +294,13 @@ const Categorys = () => {
             <figure>
               <img
                 className="w-full h-72"
-                src="https://m.media-amazon.com/images/I/41l9BKtBz3L._AC_UL320_.jpg"
+                src="https://i.ibb.co/dL0TC8N/13.jpg"
                 alt="Shoes"
               />
             </figure>
             <div className="card-body">
               <h2 className="card-title">Price: $ 257860</h2>
-              <h3>Name: Dual Tone Sports Car for Kid</h3>
+              <h3>Name: Aquamarine Stud Earrings</h3>
               <p>Rating: 4.5</p>
               <p>
                 Made of Fine Metal:- Metal Car The material used in this kids
@@ -341,10 +308,7 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-              <button
-                  onClick={handleViewDetails}
-                  className="btn btn-primary"
-                >
+                <button onClick={handleViewDetails} className="btn btn-primary">
                   View Details
                 </button>
               </div>
@@ -354,13 +318,13 @@ const Categorys = () => {
             <figure>
               <img
                 className="w-full h-72"
-                src="https://m.media-amazon.com/images/I/71aUO2ssVsL._AC_UL320_.jpg"
+                src="https://i.ibb.co/LzXDgkN/4.jpg"
                 alt="Shoes"
               />
             </figure>
             <div className="card-body">
               <h2 className="card-title">Price: $ 787250</h2>
-              <h3>Name: Dual Tone Sports Car for Kid</h3>
+              <h3>Name: Aquamarine Stud Earrings</h3>
               <p>Rating: 4.5</p>
               <p>
                 Made of Fine Metal:- Metal Car The material used in this kids
@@ -368,10 +332,7 @@ const Categorys = () => {
                 toy for kids.
               </p>
               <div className="card-actions justify-end">
-              <button
-                  onClick={handleViewDetails}
-                  className="btn btn-primary"
-                >
+                <button onClick={handleViewDetails} className="btn btn-primary">
                   View Details
                 </button>
               </div>
@@ -381,24 +342,21 @@ const Categorys = () => {
             <figure>
               <img
                 className="w-full h-72"
-                src="https://m.media-amazon.com/images/I/61IBabjt5vL._AC_UL320_.jpg"
+                src="https://i.ibb.co/swrcF6W/10.jpg"
                 alt="Shoes"
               />
             </figure>
             <div className="card-body">
               <h2 className="card-title">Price: $ 78250</h2>
-              <h3>Name: Dual Tone Sports Car for Kid</h3>
+              <h3>Name: Rose Gold Bangle Bracelet</h3>
               <p>Rating: 4.5</p>
               <p>
-                Made of Fine Metal:- Metal Car The material used in this kids
-                car is of top quality and gives a very good finish , hences best
-                toy for kids.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+                odio consectetur soluta? Deserunt enim nemo asperiores dolore a
+                eius itaque!
               </p>
               <div className="card-actions justify-end">
-                <button
-                  onClick={handleViewDetails}
-                  className="btn btn-primary"
-                >
+                <button onClick={handleViewDetails} className="btn btn-primary">
                   View Details
                 </button>
               </div>
@@ -407,7 +365,7 @@ const Categorys = () => {
         </div>
       )}
 
-        {modalOpen && (
+      {modalOpen && (
         <div className="modal">
           <div className="modal-box">
             <button className="modal-close" onClick={closeModal}>
@@ -418,8 +376,6 @@ const Categorys = () => {
           </div>
         </div>
       )}
-
-
     </div>
   );
 };

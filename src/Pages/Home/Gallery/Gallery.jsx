@@ -17,7 +17,7 @@ const Gallery = () => {
 
   return (
     <div>
-      <h1 className="text-center mt-8 text-5xl font-bold">Toy Gallery</h1>
+      <h1 className="text-center mt-8 text-5xl font-bold">Jewelrys Gallery</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 mt-8 mb-8"
         
         >
@@ -28,7 +28,7 @@ const Gallery = () => {
         >
           <img
             className="w-52 h-52"
-            src="https://m.media-amazon.com/images/I/61cVpXtoQiL._AC_UL320_.jpg"
+            src="https://i.ibb.co/XVWsK2w/4.jpg"
             alt="Shoes"
           />
         </div>
@@ -39,7 +39,7 @@ const Gallery = () => {
         >
           <img
             className="w-52 h-52"
-            src="https://m.media-amazon.com/images/I/61C6qc+nmxL._AC_UL320_.jpg"
+            src="https://i.ibb.co/sKQ1wKt/9.jpg"
             alt="Shoes"
           />
         </div>
@@ -50,7 +50,7 @@ const Gallery = () => {
         >
           <img
             className="w-52 h-52"
-            src="https://m.media-amazon.com/images/I/71hjjVXYWLL._AC_UL320_.jpg"
+            src="https://i.ibb.co/XkSDnNq/8.jpg"
             alt="Shoes"
           />
         </div>
@@ -59,7 +59,7 @@ const Gallery = () => {
         data-aos-delay="200">
           <img
             className="w-52 h-52"
-            src="https://m.media-amazon.com/images/I/71wV0evE4OL._AC_UL320_.jpg"
+            src="https://i.ibb.co/dWnPxN0/4.jpg"
             alt="Shoes"
           />
         </div>
@@ -68,7 +68,7 @@ const Gallery = () => {
         data-aos-delay="200">
           <img
             className="w-52 h-52"
-            src="https://m.media-amazon.com/images/I/61YV2eoLplS._AC_UL320_.jpg"
+            src="https://i.ibb.co/ZX2tmNj/6.jpg"
             alt="Shoes"
           />
         </div>
@@ -77,7 +77,7 @@ const Gallery = () => {
         data-aos-delay="200">
           <img
             className="w-52 h-52"
-            src="https://m.media-amazon.com/images/I/51KFL8Fj04L._AC_UL320_.jpg"
+            src="https://i.ibb.co/hM7zpDW/8.jpg"
             alt="Shoes"
           />
         </div>
@@ -86,7 +86,7 @@ const Gallery = () => {
         data-aos-delay="200">
           <img
             className="w-52 h-52"
-            src="https://m.media-amazon.com/images/I/51531iAlpnL._AC_UL320_.jpg"
+            src="https://i.ibb.co/7bqjLRB/2.jpg"
             alt="Shoes"
           />
         </div>
@@ -95,7 +95,7 @@ const Gallery = () => {
         data-aos-delay="200">
           <img
             className="w-52 h-52"
-            src="https://m.media-amazon.com/images/I/81clMrSkSYL._AC_UL320_.jpg"
+            src="https://i.ibb.co/g7G3xr6/1.jpg"
             alt="Shoes"
           />
         </div>
@@ -104,7 +104,7 @@ const Gallery = () => {
         data-aos-delay="200">
           <img
             className="w-52 h-52"
-            src="https://m.media-amazon.com/images/I/413pZ1P2JVL._AC_UL320_.jpg"
+            src="https://i.ibb.co/DCXTXsz/7.jpg"
             alt="Shoes"
           />
         </div>
@@ -113,7 +113,7 @@ const Gallery = () => {
         data-aos-delay="200">
           <img
             className="w-52 h-52"
-            src="https://m.media-amazon.com/images/I/61-2MRqOHgL._AC_UL320_.jpg"
+            src="https://i.ibb.co/M9Brqvy/5.jpg"
             alt="Shoes"
           />
         </div>
@@ -122,7 +122,7 @@ const Gallery = () => {
         data-aos-delay="200">
           <img
             className="w-52 h-52"
-            src="https://m.media-amazon.com/images/I/71j7T2HfK6L._AC_UL320_.jpg"
+            src="https://i.ibb.co/n11sJ7N/3.jpg"
             alt="Shoes"
           />
         </div>
@@ -131,7 +131,7 @@ const Gallery = () => {
         data-aos-delay="200">
           <img
             className="w-52 h-52"
-            src="https://m.media-amazon.com/images/I/71MkkOsVu6L._AC_UL320_.jpg"
+            src="https://i.ibb.co/0hQg0LN/7.jpg"
             alt="Shoes"
           />
         </div>

@@ -72,7 +72,7 @@ const ToyBooking = () => {
 
   return (
     <div>
-      <h2 className="text-5xl mt-4 mb-4">Ad To Toy bookings: {bookings.length}</h2>
+      <h2 className="text-5xl mt-4 mb-4">Ad To Jewelrys bookings: {bookings.length}</h2>
       <div className="flex items-center justify-between mb-4">
         <div>
           <input

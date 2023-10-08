@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import logo from '../../../assets/logo.svg'
 import './NavBar.css'
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
@@ -82,7 +81,7 @@ const NavBar = () => {
                 <Link to="/" className="">
                 <div className="avatar">
                    <div className="w-16 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                     <img src={logo} />
+                     <img src="https://i.ibb.co/7SYmYHG/logo.png" />
                    </div>
                  </div>
                 </Link>

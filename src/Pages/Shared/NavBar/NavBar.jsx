@@ -24,7 +24,7 @@ const NavBar = () => {
     <>
         <li
         ><Link to="/">Home</Link> </li>
-        <li><Link to='/animaltoys'>All Toy</Link> </li>
+        <li><Link to='/animaltoys'>All jewelry</Link> </li>
 
         <li>
         <div className="dropdown dropdown-hover">

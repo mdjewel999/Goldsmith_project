@@ -47,11 +47,11 @@ const About = () => {
               and design inspirations.
             </p>
             <p className="py-6">
-              Remember to choose a name that resonates with your brand's style
+              Remember to choose a name that resonates with your brands style
               and values. It should also be memorable and easy to pronounce.
               Feel free to mix and match these ideas or create something
-              entirely unique that reflects your jewelry line's essence. Your
-              jewelry's name can be a powerful part of your brand identity.
+              entirely unique that reflects your jewelry lines essence. Your
+              jewelrys name can be a powerful part of your brand identity.
             </p>
             <button className="btn btn-primary">Get More Info</button>
           </div>

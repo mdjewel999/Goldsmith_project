@@ -29,11 +29,9 @@ const NavBar = () => {
         <div className="dropdown dropdown-hover">
        <label tabIndex={0} className="btn m-1">All Category</label>
        <ul tabIndex={0} className="dropdown-content  p-4 mt-96 sm:mr-96  bg-base-100 rounded-box w-48">
-        <li><Link>sports car</Link></li>
-        <li><Link>Regular car</Link></li>
         <li><Link to="/animaltoys">Goldsimth</Link></li>
-        <li><Link>Mini fire truck</Link></li>
-        <li><Link>Mini police car</Link></li>
+        <li><Link>Palatem Jewelrys</Link></li>
+        <li><Link>Gold Jewelrys</Link></li>
       </ul>
       </div>
       </li>
